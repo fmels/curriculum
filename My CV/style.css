@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-}
+   }
 
 div.transbox {
     background-color: #ffffff;
@@ -41,15 +41,12 @@ div.transbox {
     padding: 3%;
  } */
 
-  div.transbox h2 {
-    /* margin: 5%; */
-    font-weight: bold;
-    color: #000000;
-  }
+/*  */
   
 div.transbox p {
     margin: 5%;
     color: #000000;
+    /* font-size: 2.5vmin; */
   }
 
 /* This is my tabs section*/
@@ -69,14 +66,13 @@ section .section-title {
 }
 #tabs h6.section-title{
     color: black;
-    font-size: 40px;
+    font-size: 5vmin;
 }
-
+/* 
 #tabs h5.section-title{
     color: black;
-    font-size: 20px;
-    font-size: 
-}
+    font-size: 2.5vmin;
+} */
 
 
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -84,7 +80,7 @@ section .section-title {
     background-color: transparent;
     border-color: transparent transparent black;
     border-bottom: 4px solid !important;
-    font-size: 30px;
+    font-size: 3vmin;
     font-weight: bold;
 }
 #tabs .nav-tabs .nav-link {
@@ -92,16 +88,16 @@ section .section-title {
     border-top-left-radius: .25rem;
     border-top-right-radius: .25rem;
     color: black;
-    font-size: 30px;
+    font-size: 3.5vmin;
 }
 #tabs [role="tabpanel"]{
-    font-size: 20px;
+    font-size: 2.5vmin;
 }
 
 div.subheader {
     color: black;
     text-align: center;
-    font-size: 20px;
+    font-size: 2vmin;;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 30px;
