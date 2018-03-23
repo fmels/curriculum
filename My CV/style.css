@@ -1,5 +1,6 @@
 html {
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 /* @font-face {
@@ -15,16 +16,31 @@ body {
     background-position: center;
 }
 
-div.transbox {
+    div.transbox {
     background-color: #ffffff;
     border: 3px solid black;
     opacity: 0.79;
     margin-top: 6%;
     margin-bottom: 80px;
-    margin-right: 40%;
     margin-left: 4%;
+    margin-right: 40%;
+    float: left;
     /* padding: 3%; */
     filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
+
+@media only screen and (max-width: 600px) {
+    div.transbox {
+    background-color: #ffffff;
+    border: 3px solid black;
+    opacity: 0.79;
+    margin-top: 6%;
+    margin-bottom: 80px;
+    margin-left: 4%;
+    float: left;
+    /* padding: 3%; */
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    }
   }
 
   div.transbox h2 {
