@@ -3,31 +3,38 @@ html {
     box-sizing: border-box;
 }
 
-/* @font-face {
-    font-family: mononoki;
-    src: url("./../fonts/mononoki-Regular.ttf")
-} */
-
 body {
     background-image: url("image/shishkin3.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-   }
+
+  }
 
 div.transbox {
-    background-color: #ffffff;
+    font-family: 'Overlock';
+    background-color: rgb(255, 255, 255, 0.8);
     border: 3px solid black;
-    opacity: 0.80;
-    margin-top: 6%;
+    /* opacity: 0.80; */
+    margin-top: 5%;
     margin-bottom: 80px;
-    margin-left: 4%;
+    margin-left: 5%;
     margin-right: 4%;
     float: left;
     padding: 3%;
     filter: alpha(opacity=60); /* For IE8 and earlier */
-  }
+}
+
+  section {
+    padding: 10px 2px 10px 2px;
+}
+
+section .section-title {
+    text-align: center;
+    margin-bottom: 29px;
+    text-transform: uppercase;
+}
 
   div.subheader {
     color: black;
@@ -56,26 +63,29 @@ div.transbox p {
     margin: 3%;
     color: #000000;
     /* font-size: 2.5vmin; */
-  }
+}
+
+div.transbox img {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 59%;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
 
 /* This is my tabs section*/
-section {
-    padding: 10px 2px 10px 2px;
-}
 
-section .section-title {
-    text-align: center;
-    /* color: #007b5e; */
-    margin-bottom: 29px;
-    text-transform: uppercase;
-}
 #tabs{
-	/* background: #007b5e; */
     color: black;
 }
 #tabs h6.section-title{
     color: black;
     font-size: 5vmin;
+    font-family: 'EB Garamond';
+    font-weight: bold;
+    margin-top: 2px;
 }
 /* 
 #tabs h5.section-title{
@@ -83,11 +93,12 @@ section .section-title {
     font-size: 2.5vmin;
 } */
 
-
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: black;
-    background-color: transparent;
-    border-color: transparent transparent black;
+    /* color: black; */
+    /* background-color: transparent; */
+    /* border-color: transparent transparent black; */
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* opacity: 80%; */
     border-bottom: 4px solid !important;
     font-size: 3vmin;
     font-weight: bold;
@@ -101,4 +112,11 @@ section .section-title {
 }
 #tabs [role="tabpanel"]{
     font-size: 2.5vmin;
+    }
+
+/*This is for my links */
+a:link {
+    color: black; 
+    background-color: transparent; 
+    text-decoration: none;
 }
