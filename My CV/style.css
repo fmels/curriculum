@@ -59,13 +59,12 @@ div.subheader {
 /*  */
   
 div.transbox p {
-    margin: 3%;
+    margin-bottom: 22px;
     color: #000000;
     font-size: 2.5vmin;
 }
 
 div.transbox h3 {
-    /* margin: 1%; */
     font-family: 'EB Garamond';
     font-weight: bold;
     font-size: 2.8vmin;
@@ -73,12 +72,15 @@ div.transbox h3 {
 
 div.transbox img {
     width: 250px;
+    max-width: 100%;
     height: 250px;
+    max-height: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 59%;
     margin-right: 40px;
     margin-bottom: 20px;
+    margin-top: 22px;
 }
 
 
@@ -140,18 +142,21 @@ ul li:before {
     background-color: transparent;
     height: 100%;
     width: 90%;
-    margin: 3%;
+    /* margin: 3%; */
 }
 #left-column {
 	float: left;
-    /* background-color: red; */
-	width: 50%;
+	width: 65%;
     height:inherit;
 }
 
 #right-column {
     float: left;
-    /* background-color: blue; */
-	width: 50%;
+	width: 35%;
     height:inherit;
+}
+
+hr {
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
