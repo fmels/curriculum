@@ -35,10 +35,10 @@ section .section-title {
     text-transform: uppercase;
 }
 
-  div.subheader {
+div.subheader {
     color: black;
     text-align: center;
-    font-size: 2vmin;;
+    font-size: 2vmin;
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 15px;
@@ -64,6 +64,13 @@ div.transbox p {
     font-size: 2.5vmin;
 }
 
+div.transbox h3 {
+    /* margin: 1%; */
+    font-family: 'EB Garamond';
+    font-weight: bold;
+    font-size: 2.8vmin;
+}
+
 div.transbox img {
     width: 250px;
     height: 250px;
@@ -73,6 +80,7 @@ div.transbox img {
     margin-right: 40px;
     margin-bottom: 20px;
 }
+
 
 /* This is my tabs section*/
 
@@ -112,9 +120,38 @@ div.transbox img {
     font-size: 2.5vmin;
     }
 
-/*This is for my links */
+/*This is for the skills page */
 a:link {
     color: black; 
     background-color: transparent; 
     text-decoration: none;
+}
+
+ul {
+    list-style: none;
+  }
+  
+ul li:before {
+    content: '✓';
+    color: green;
+  }
+
+#skillcontainer{
+    background-color: transparent;
+    height: 100%;
+    width: 90%;
+    margin: 3%;
+}
+#left-column {
+	float: left;
+    /* background-color: red; */
+	width: 50%;
+    height:inherit;
+}
+
+#right-column {
+    float: left;
+    /* background-color: blue; */
+	width: 50%;
+    height:inherit;
 }

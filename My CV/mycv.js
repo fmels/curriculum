@@ -1,43 +1,36 @@
-
 const baseURL = "https://api.github.com"
-function repo(
+
+const embrace = (function() {
+    function DOMify(htmlString) {
+      const template = document.createElement("template")
+      template.innerHTML = htmlString
+  
+      return template.content.firstElementChild
+    }
+  
+    return {
+      DOMify: DOMify
+    }
+  })()
+
 fetch(`${baseURL}/users/fmels/repos`)
     .then(response => response.json())
     .then(repositories => {
+        console.log(repositories)
+        let outerDiv = document.getElementById("repo")
         for (let repo of repositories) {
 
-            const repoPara = document.createElement("p")
-            repoPara.innerText = repo.name
-            repoDiv.appendChild(repoPara)
+            // console.log(repo.name, repo.description, repo.language)
 
+            let repoElement = embrace.DOMify(`
+                <div class="repository">
+                    <h1>${repo.name}</h1>
+                    <p>Description: ${repo.description}</p>
+                    <p>Language: ${repo.language}</p>
+                </div>
+            `)
+            outerDiv.appendChild(repoElement)
+            console.log(repoElement)
         }
+        
     })
-
-// const namesElement = document.getElementById('names');
-// const nameInput = document.getElementById('name');
-// const namesList = [
-//     [Dutch: native],
-//     [English: fluent],
-//     [German: fluent],
-//     [Russian: adequate],
-//     [French: adequate],
-//     [Polish: elementary],
-//     [Spanish: elementary]
-// ];
-
-// document.getElementById('enter').addEventListener('click', function() {
-//     const newName = nameInput.value.trim();
-//     // Only add when we have a value.
-//     if (newName) {
-//       namesList.push(newName);
-//       for (var i = 0, n; n = namesList[i]; i++) {
-//           var liElement = document.createElement('li');
-//           liElement.innerText = n;
-//       }
-//       namesElement.appendChild(liElement);
-//     }
-//     // Let's blank out the input ready for the next
-//     nameInput.value = '';
-//     // ...and focus it!
-//     nameInput.focus();
-// });
