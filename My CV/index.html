@@ -9,28 +9,88 @@
         <!-- Title -->
         <title>Floyd Melssen - CV</title>
 
-        <!-- CSS -->
+        <!-- CSS external files (do NOT switch the loading order) -->
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="./vendor/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./vendor/css/bootstrap.css">
         <link rel="stylesheet" href="./vendor/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href=".MYCV.css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+
+        <!-- The font families -->
+        <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Overlock' rel='stylesheet'>
+
     </head>
     
     <body>
-        <h1>hoi</h1>
-  
-        <!-- vendor js -->
-        <script src="./vendor/js/jquery-3.3.1.min.js"></script>
-        <script src="./vendor/js/bootstrap.min.js"></script>
-        
-        <!-- for development only, remove in production -->
-        <!-- <script src="./vendor/js/event-monitor-1.0.0.js"></script> -->
+        <div class="transbox" >
+            <!-- Tabs -->
+        <section id="tabs">
+        <div class="container">
+            <h6 class="section-title h1">Floyd Melssen</h6>
 
-        <!-- helper functions -->
-        <script src="./js/embrace.js"></script>
-        <script src="./js/github.js"></script>
+            <!-- This is the part above the tab section -->
+            <div class=subheader>
+                <i class="fas fa-envelope"></i><a href="mailto:niefloyd@hotmail.com?subject=I really liked your CV">Mail me</a> |  <i class="fa fa-phone"></i> 06-123456789 | <i class="fab fa-linkedin-in"></i><a href="www.linkedin.com/in/floyd-melssen-44a64b15b
+                " target="_blank"> LinkedIn</a> 
+            </div>
 
-        <!-- custom js -->
-        <script src="./js/final-project.js"></script>
-    </body>
+            <!-- Here starts the tab section -->
+            <div class="row">
+                <div class="col-xs-12 ">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">About</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Skills</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Experience</a>
+                            <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Portfolio</a>
+                        </div>
+                    </nav>
+
+                    <!-- These contain the contents of the tabs -->
+                    <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="image-cropper">   
+                                <img alt="image-responsive" src="image/FMelssen.jpg" class="pull-left">
+                            </div>
+                            <div id="include0_html">
+                            </div>              
+                        </div>
+                        
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div id="include1_html">
+                            </div>
+                        </div>
+                        
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div id="include2_html">
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
+                            This is a list of all my public repositories on Github. You are more than welcome to check them out and browse the code. In case you have any comments, I would love to hear from you.
+                            <div id="repo"></div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Imma loading the javascript files -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>   
+<!-- <script src="./vendor/js/event-monitor-1.0.0.js"></script> -->
+<script src="./mycv.js"></script>
+
+<!-- This function loads the external HTML files -->
+<script>
+    $(function(){
+    $("#include0_html").load("about.html");
+    $("#include1_html").load("skills.html");
+    $("#include2_html").load("experience.html")
+    });
+</script>
+</body>
 </html>
