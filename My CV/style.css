@@ -19,7 +19,7 @@ div.transbox {
     margin-top: 5%;
     margin-bottom: 80px;
     margin-left: 5%;
-    margin-right: 4%;
+    margin-right: 6%;
     float: left;
     padding: 3%;
     filter: alpha(opacity=60); /* For IE8 and earlier */
@@ -44,51 +44,42 @@ div.subheader {
     margin-bottom: 15px;
 }
 
-/* @media only screen and (max-width: 600px) {
-    div.transbox {
-    background-color: #ffffff;
-    border: 3px solid black;
-    opacity: 0.79;
-    margin-top: 6%;
-    margin-bottom: 80px;
-    margin-left: 4%;
-    float: left;
-    padding: 3%;
- } */
-
-/*  */
-  
 div.transbox p {
     margin-bottom: 22px;
     color: #000000;
     font-size: 2.5vmin;
 }
 
+div.transbox dd {
+    margin-bottom:10px;
+    font-size:2.5vmin;
+}
+
 div.transbox h3 {
     font-family: 'EB Garamond';
     font-weight: bold;
     font-size: 2.8vmin;
+    margin-bottom: 15px;
 }
 
 div.transbox img {
-    width: 250px;
-    max-width: 100%;
-    height: 250px;
-    max-height: 100%;
+    /* width: 250px;*/
+    max-width: 50%;
+    /* height: 250px; */
+    max-height: 50%;
     position: relative;
     overflow: hidden;
     border-radius: 59%;
     margin-right: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-top: 22px;
 }
-
-
 /* This is my tabs section*/
 
 #tabs{
     color: black;
 }
+
 #tabs h6.section-title{
     color: black;
     font-size: 5vmin;
@@ -96,11 +87,6 @@ div.transbox img {
     font-weight: bold;
     margin-top: 2px;
 }
-/* 
-#tabs h5.section-title{
-    color: black;
-    font-size: 2.5vmin;
-} */
 
 #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: black;
@@ -111,6 +97,7 @@ div.transbox img {
     font-size: 3vmin;
     font-weight: bold;
 }
+
 #tabs .nav-tabs .nav-link {
     border: 1px solid transparent;
     border-top-left-radius: .25rem;
@@ -133,26 +120,38 @@ ul {
     list-style: none;
   }
   
-ul li:before {
+ul.tech-skills li:before {
     content: '✓';
     color: green;
   }
 
+li.language {
+    display: flex;
+    align-items: center;
+}
+
+li.language img {
+    max-width: 5%;
+    margin: 0;
+    margin-right: 8px;
+}
+
 #skillcontainer{
     background-color: transparent;
     height: 100%;
-    width: 90%;
+    width: 95%;
     /* margin: 3%; */
 }
 #left-column {
 	float: left;
-	width: 65%;
+	width: 50%;
     height:inherit;
+    list-style: none;
+    
 }
-
 #right-column {
     float: left;
-	width: 35%;
+	width: 50%;
     height:inherit;
 }
 

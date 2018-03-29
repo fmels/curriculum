@@ -9,9 +9,8 @@
         <!-- Title -->
         <title>Floyd Melssen - CV</title>
 
-        <!-- CSS -->
+        <!-- CSS external files (do NOT switch the loading order) -->
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        <!-- <link rel="stylesheet" href="./vendor/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="./vendor/css/bootstrap.css">
         <link rel="stylesheet" href="./vendor/css/fontawesome-all.min.css">
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -29,10 +28,14 @@
         <section id="tabs">
         <div class="container">
             <h6 class="section-title h1">Floyd Melssen</h6>
+
+            <!-- This is the part above the tab section -->
             <div class=subheader>
-                    <i class="fas fa-envelope"></i><a href="mailto:niefloyd@hotmail.com?subject=I really liked your CV">Mail me</a> |  <i class="fa fa-phone"></i> 06-123456789 | <i class="fab fa-linkedin-in"></i><a href="www.linkedin.com/in/floyd-melssen-44a64b15b
-                    " target="_blank"> LinkedIn</a> 
+                <i class="fas fa-envelope"></i><a href="mailto:niefloyd@hotmail.com?subject=I really liked your CV">Mail me</a> |  <i class="fa fa-phone"></i> 06-123456789 | <i class="fab fa-linkedin-in"></i><a href="www.linkedin.com/in/floyd-melssen-44a64b15b
+                " target="_blank"> LinkedIn</a> 
             </div>
+
+            <!-- Here starts the tab section -->
             <div class="row">
                 <div class="col-xs-12 ">
                     <nav>
@@ -44,30 +47,29 @@
                         </div>
                     </nav>
 
+                    <!-- These contain the contents of the tabs -->
                     <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
-
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                <div class="image-cropper">   
-                                    <img alt="" src="image/FMelssen.jpg" class="pull-left">
-                                </div>
-                                <div id="include0_html">
-                                </div>              
+                            <div class="image-cropper">   
+                                <img alt="image-responsive" src="image/FMelssen.jpg" class="pull-left">
+                            </div>
+                            <div id="include0_html">
+                            </div>              
                         </div>
                         
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <div id="include1_html">
-                                </div>
+                            <div id="include1_html">
+                            </div>
                         </div>
                         
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <div id="include2_html">
-                                </div>
+                            <div id="include2_html">
+                            </div>
                         </div>
 
                         <div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-                            This is a list of all my public repositories on Github. You are more than welcome to check them out and browse the code!
+                            This is a list of all my public repositories on Github. You are more than welcome to check them out and browse the code. In case you have any comments, I would love to hear from you.
                             <div id="repo"></div>
-
                         </div>
                     </div>
                  </div>
@@ -76,14 +78,13 @@
     </section>
 </div>
 
+<!-- Imma loading the javascript files -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>   
-<script src="./vendor/js/event-monitor-1.0.0.js"></script>
-
+<!-- <script src="./vendor/js/event-monitor-1.0.0.js"></script> -->
 <script src="./mycv.js"></script>
 
-
+<!-- This function loads the external HTML files -->
 <script>
     $(function(){
     $("#include0_html").load("about.html");
@@ -91,18 +92,5 @@
     $("#include2_html").load("experience.html")
     });
 </script>
-<!-- vendor js -->
-<!-- <script src="./vendor/js/jquery-3.3.1.min.js"></script> -->
-<!-- <script src="./vendor/js/bootstrap.min.js"></script> -->
-
-<!-- for development only, remove in production -->
-
-
-<!-- helper functions -->
-<!-- <script src="./js/embrace.js"></script> -->
-<!-- <script src="./js/github.js"></script> -->
-
-<!-- custom js -->
-<!-- <script src="./js/final-project.js"></script> -->
 </body>
 </html>

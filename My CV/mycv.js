@@ -1,5 +1,6 @@
 const baseURL = "https://api.github.com"
 
+// this is the helper function for the API
 const embrace = (function() {
     function DOMify(htmlString) {
       const template = document.createElement("template")
@@ -13,6 +14,7 @@ const embrace = (function() {
     }
   })()
 
+//   This part loads the API thingy
 fetch(`${baseURL}/users/fmels/repos`)
     .then(response => response.json())
     .then(repositories => {
@@ -24,13 +26,18 @@ fetch(`${baseURL}/users/fmels/repos`)
 
             let repoElement = embrace.DOMify(`
                 <div class="repository">
-                    <h1>${repo.name}</h1>
-                    <p>Description: ${repo.description}</p>
-                    <p>Language: ${repo.language}</p>
+                <hr>
+                    <dd><a href="https://github.com/fmels">Name: </a>${repo.name}</dd>
+                    <dd>Description: ${repo.description}</dd>
+                    <dd>Language: ${repo.language}</dd>
+                    <dd>Size: ${repo.size}</dd>
                 </div>
             `)
             outerDiv.appendChild(repoElement)
             console.log(repoElement)
+            let stripe = embrace.DOMify(`
+            <hr>
+            `)
         }
         
     })
