@@ -41,3 +41,15 @@ fetch(`${baseURL}/users/fmels/repos`)
         }
         
     })
+
+    // const quoteArray = [
+    //     ['Wisdom is the mother of knowledge'],
+    //     ['Experience this, sucker'],
+    //     ['Knowledge is power'],
+    //     ['Wisdom is the mother of experience']
+
+    // function rotateQuote(){
+    //     for(i=0; i=quoteArray.length; i++){
+    //         Math.floor(Math.random(i))
+    //     }
+    // 
